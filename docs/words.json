@@ -1,8 +1,23 @@
 [
   {
+    "date": "2025-06-21",
     "word": "árbol",
     "translation": "tree",
     "example": "El árbol es muy alto.",
     "pronunciation": "AHR-bol"
+  },
+  {
+    "date": "2025-06-22",
+    "word": "perro",
+    "translation": "dog",
+    "example": "El perro duerme en el sofá.",
+    "pronunciation": "PEHR-ro"
+  },
+  {
+    "date": "2025-06-23",
+    "word": "escuela",
+    "translation": "school",
+    "example": "Voy a la escuela todos los días.",
+    "pronunciation": "es-KWEH-lah"
   }
 ]
