@@ -1,12 +1,19 @@
-// frontend/script.js
-fetch('http://localhost:3000/word/today')
+fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/main/docs/words.json')
   .then(res => res.json())
   .then(data => {
-    document.getElementById('word').textContent = data.word;
-    document.getElementById('translation').textContent = `(${data.translation})`;
-    document.getElementById('example').textContent = `"${data.example}"`;
-    document.getElementById('pronunciation').textContent = `Pronunciation: ${data.pronunciation}`;
+    const today = new Date().toISOString().split('T')[0];
+    const todayWord = data.find(entry => entry.date === today);
+
+    if (todayWord) {
+      document.getElementById('word').textContent = todayWord.word;
+      document.getElementById('translation').textContent = `(${todayWord.translation})`;
+      document.getElementById('example').textContent = `"${todayWord.example}"`;
+      document.getElementById('pronunciation').textContent = `Pronunciation: ${todayWord.pronunciation}`;
+    } else {
+      document.getElementById('word').textContent = "No word found for today.";
+    }
   })
   .catch(err => {
-    console.error('Error fetching word:', err);
+    console.error('Error fetching words.json:', err);
   });
+
