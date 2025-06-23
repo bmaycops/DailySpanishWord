@@ -1,4 +1,15 @@
-<body class="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-4">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spanish Word of the Day</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-4 font-sans">
+
+  <!-- Word of the Day -->
   <div id="today-word" class="bg-white p-6 rounded-xl shadow-md w-full max-w-md text-left mb-6 relative">
     <span id="today-date" class="absolute top-2 left-4 text-xs text-gray-400"></span>
     <h1 class="text-2xl font-bold mb-2">🌟 Word of the Day</h1>
@@ -8,5 +19,11 @@
     <p id="pronunciation" class="text-sm text-gray-400 mt-1"></p>
   </div>
 
-  <div id="previous-words" class="w-full max-w-md space-y-4"></div>
+  <!-- Previous Words -->
+  <div class="w-full max-w-md">
+    <h2 class="text-lg font-semibold mb-2 text-gray-600">Previous Words</h2>
+    <div id="previous-words" class="space-y-4"></div>
+  </div>
+
 </body>
+</html>
