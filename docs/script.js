@@ -1,4 +1,4 @@
-fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/main/docs/words.json')
+fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/wordle-style/docs/words.json')
   .then(res => res.json())
   .then(data => {
     const today = new Date().toISOString().split('T')[0];
