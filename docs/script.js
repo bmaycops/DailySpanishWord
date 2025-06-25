@@ -10,7 +10,7 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
       document.getElementById('translation').textContent = `(${todayWord.translation})`;
       document.getElementById('example').textContent = `"${todayWord.example}"`;
       document.getElementById('pronunciation').textContent = `Pronunciation: ${todayWord.pronunciation}`;
-      document.getElementById('today-date').textContent = todayWord.date;
+      document.getElementById('today-date').textContent ="Today";
     }
 
     const prevContainer = document.getElementById('previous-words');
