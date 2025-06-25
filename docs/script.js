@@ -74,10 +74,11 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
     }
     const prevContainer = document.getElementById('previous-words');
     previousWords.forEach(entry => {
+      const formattedDate = formatDate(entry.date); // Format the date
       const box = document.createElement('div');
       box.className = 'bg-gray-200 text-gray-700 p-4 rounded-xl shadow-sm relative';
       box.innerHTML = `
-        <span class="absolute top-2 left-4 text-xs text-gray-500">${entry.date}</span>
+        <span class="absolute top-2 right-4 text-xs text-gray-500">${formattedDate}</span>
         <p class="text-lg font-semibold">${entry.word}</p>
         <p class="text-md">(${entry.translation})</p>
         <p class="italic text-sm mt-1">${entry.example}</p>
@@ -89,3 +90,27 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
   .catch(err => {
     console.error('Error fetching words:', err);
   });
+
+// Helper function to format the date
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const day = date.getDate();
+  const month = date.toLocaleString('en-US', { month: 'long' });
+  const year = date.getFullYear();
+
+  // Add suffix to the day (e.g., "23rd")
+  const daySuffix = getDaySuffix(day);
+
+  return `${day}${daySuffix} ${month} ${year}`;
+}
+
+// Helper function to determine the day suffix
+function getDaySuffix(day) {
+  if (day > 3 && day < 21) return 'th'; // Covers 4th-20th
+  switch (day % 10) {
+    case 1: return 'st';
+    case 2: return 'nd';
+    case 3: return 'rd';
+    default: return 'th';
+  }
+}
