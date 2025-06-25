@@ -11,11 +11,15 @@
 
   <!-- Word of the Day -->
   <div id="today-word" class="bg-white p-6 rounded-xl shadow-md w-full max-w-md text-left mb-6 relative">
-    <span id="today-date" class="absolute top-2 left-4 text-xs text-gray-400"></span>
+    <span id="today-date" class="absolute top-2 right-4 text-xs text-gray-400"></span>
     <p id="word" class="text-xl font-semibold text-blue-600"></p>
-    <p id="translation" class="text-md text-gray-700"></p>
-    <p id="example" class="italic mt-2 text-gray-500"></p>
-    <p id="pronunciation" class="text-sm text-gray-400 mt-1"></p>
+    <div class="mt-4" id="input-section">
+      <div id="input-container" class="flex gap-1 mb-2"></div>
+      <button id="submit-guess" class="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+    </div>
+    <div id="guess-feedback" class="mt-4 max-h-40 overflow-y-auto space-y-2 flex flex-col"></div>
+    <p id="example" class="italic mt-2 text-gray-500 hidden"></p>
+    <p id="pronunciation" class="text-sm text-gray-400 mt-1 hidden"></p>
   </div>
 
   <!-- Previous Words -->
@@ -23,6 +27,7 @@
     <h2 class="text-lg font-semibold mb-2 text-gray-600">Previous Words</h2>
     <div id="previous-words" class="space-y-4"></div>
   </div>
+
 
 </body>
 </html>
