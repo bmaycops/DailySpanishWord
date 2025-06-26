@@ -5,9 +5,13 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
     const todayWord = data.find(entry => entry.date === today);
     const previousWords = data.filter(entry => entry.date < today).slice(-5).reverse();
 
-    if (todayWord) {1
-      document.getElementById('word').textContent = todayWord.word;
-      document.getElementById('today-date').textContent = "Today";
+    if (todayWord) {
+      const wordElement = document.getElementById('word');
+      const dateElement = document.getElementById('today-date');
+
+      // Update the word element to include pronunciation
+      wordElement.innerHTML = `${todayWord.word} <span class="text-sm text-gray-500">(${todayWord.pronunciation})</span>`;
+      dateElement.textContent = "Today";
 
       const correct = todayWord.translation.trim().toLowerCase();
       const feedbackContainer = document.getElementById('guess-feedback');
@@ -39,6 +43,14 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
               previousBox.focus();
               previousBox.value = ''; // Clear the previous box
             }
+          }
+        });
+
+        // Add event listener to restrict input to letters only
+        inputBox.addEventListener('keypress', (e) => {
+          const char = String.fromCharCode(e.keyCode || e.which);
+          if (!/^[a-zA-Z]$/.test(char)) {
+            e.preventDefault(); // Prevent non-letter characters
           }
         });
 
@@ -112,11 +124,13 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
       const box = document.createElement('div');
       box.className = 'bg-gray-200 pt-3 pb-6 px-6 rounded-xl shadow-sm';
 
-      // Create the header section (word and date with dropdown arrow)
+      // Create the header section (word, pronunciation, and date with dropdown arrow)
       const header = document.createElement('div');
       header.className = 'flex justify-between items-center cursor-pointer';
       header.innerHTML = `
-        <p class="text-lg font-semibold">${entry.word}</p>
+        <div class="flex items-center space-x-2">
+          <p class="text-lg font-semibold">${entry.word} <span class="text-sm text-gray-500">(${entry.pronunciation})</span></p>
+        </div>
         <div class="flex items-center space-x-2">
           <span class="text-xs text-gray-500">${formattedDate}</span>
           <button class="text-gray-500 text-sm">▼</button>
@@ -127,10 +141,13 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
       const content = document.createElement('div');
       content.className = 'hidden mt-2'; // Initially hidden
       content.innerHTML = `
-        <p class="text-md text-gray-700 italic">(${entry.translation})</p>
+        <div class="flex gap-1 mt-2">
+          ${entry.translation.split('').map(char => `
+            <div class="w-8 h-8 text-center border border-gray-300 rounded font-bold text-white bg-green-500">${char}</div>
+          `).join('')}
+        </div>
         <p class="italic text-sm mt-1">${entry.example}</p>
         <p class="italic text-sm mt-1">${entry.example_translation}</p>
-        <p class="text-xs mt-1 text-gray-500">Pronunciation: ${entry.pronunciation}</p>
       `;
 
       // Add event listener to toggle visibility of the content
