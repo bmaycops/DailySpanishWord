@@ -1,11 +1,11 @@
-fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/wordle-style/docs/words.json')
+fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/main/docs/words.json')
   .then(res => res.json())
   .then(data => {
     const today = new Date().toISOString().split('T')[0];
     const todayWord = data.find(entry => entry.date === today);
     const previousWords = data.filter(entry => entry.date < today).slice(-5).reverse();
 
-    if (todayWord) {
+    if (todayWord) {1
       document.getElementById('word').textContent = todayWord.word;
       document.getElementById('today-date').textContent = "Today";
 
@@ -20,6 +20,28 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/wo
         inputBox.maxLength = 1;
         inputBox.className = 'w-8 h-8 text-center border border-gray-300 rounded';
         inputBox.dataset.index = i;
+
+        // Add event listener to move to the next box
+        inputBox.addEventListener('input', (e) => {
+          const currentIndex = parseInt(e.target.dataset.index, 10);
+          const nextBox = inputContainer.querySelector(`input[data-index="${currentIndex + 1}"]`);
+          if (nextBox) {
+            nextBox.focus();
+          }
+        });
+
+        // Add event listener for backspace functionality
+        inputBox.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && e.target.value === '') {
+            const currentIndex = parseInt(e.target.dataset.index, 10);
+            const previousBox = inputContainer.querySelector(`input[data-index="${currentIndex - 1}"]`);
+            if (previousBox) {
+              previousBox.focus();
+              previousBox.value = ''; // Clear the previous box
+            }
+          }
+        });
+
         inputContainer.appendChild(inputBox);
       }
 
@@ -53,6 +75,12 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/wo
 
         feedbackContainer.prepend(row);
         feedbackContainer.scrollTop = 0;
+
+        // Clear the input fields
+        guessBoxes.forEach(input => {
+          input.value = '';
+        });
+
         guessCount++;
 
         if (userGuess === correct) {
@@ -65,10 +93,21 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/wo
           success.className = 'text-green-600 text-sm';
           feedbackContainer.appendChild(success);
 
+          // Display example and pronunciation
           document.getElementById('example').textContent = `"${todayWord.example}"`;
+          document.getElementById('example_translation').textContent = `"${todayWord.example_translation}"`;
           document.getElementById('pronunciation').textContent = `Pronunciation: ${todayWord.pronunciation}`;
           document.getElementById('example').classList.remove('hidden');
           document.getElementById('pronunciation').classList.remove('hidden');
+          document.getElementById('example_translation').classList.remove('hidden');
+
+          /*
+          // Display example translation
+          const exampleTranslationElement = document.createElement('p');
+          exampleTranslationElement.textContent = `"${todayWord.example_translation}"`;
+          exampleTranslationElement.className = 'italic text-sm mt-1 text-gray-500';
+          feedbackContainer.appendChild(exampleTranslationElement);
+          */
         }
       });
     }
@@ -82,6 +121,7 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/wo
         <p class="text-lg font-semibold">${entry.word}</p>
         <p class="text-md">(${entry.translation})</p>
         <p class="italic text-sm mt-1">${entry.example}</p>
+        <p class="italic text-sm mt-1"">${entry.example_translation}</p>
         <p class="text-xs mt-1 text-gray-500">Pronunciation: ${entry.pronunciation}</p>
       `;
       prevContainer.appendChild(box);
@@ -112,5 +152,4 @@ function getDaySuffix(day) {
     case 2: return 'nd';
     case 3: return 'rd';
     default: return 'th';
-  }
-}
+  }}

@@ -1,23 +1,402 @@
 [
   {
-    "date": "2025-06-24",
-    "word": "árbol",
-    "translation": "tree",
-    "example": "El árbol es muy alto.",
-    "pronunciation": "AHR-bol"
+    "date": "2025-06-20",
+    "word": "niño",
+    "translation": "boy",
+    "example": "El niño juega en el parque.",
+    "pronunciation": "NEEN-yo",
+    "example_translation": "The boy plays in the park."
   },
   {
-    "date": "2025-06-25",
-    "word": "perro",
-    "translation": "dog",
-    "example": "El perro duerme en el sofá.",
-    "pronunciation": "PEHR-ro"
+    "date": "2025-06-21",
+    "word": "casa",
+    "translation": "house",
+    "example": "La casa es grande y blanca.",
+    "pronunciation": "KAH-sah",
+    "example_translation": "The house is big and white."
+  },
+  {
+    "date": "2025-06-22",
+    "word": "libro",
+    "translation": "book",
+    "example": "Leo un libro interesante.",
+    "pronunciation": "LEE-bro",
+    "example_translation": "I read an interesting book."
   },
   {
     "date": "2025-06-23",
+    "word": "gato",
+    "translation": "cat",
+    "example": "El gato está en la ventana.",
+    "pronunciation": "GAH-to",
+    "example_translation": "The cat is on the window."
+  },
+  {
+    "date": "2025-06-24",
+    "word": "ciudad",
+    "translation": "city",
+    "example": "La ciudad es muy antigua.",
+    "pronunciation": "see-you-DAHD",
+    "example_translation": "The city is very old."
+  },
+  {
+    "date": "2025-06-25",
+    "word": "amigo",
+    "translation": "friend",
+    "example": "Mi amigo viene a la fiesta.",
+    "pronunciation": "ah-MEE-go",
+    "example_translation": "My friend is coming to the party."
+  },
+  {
+    "date": "2025-06-26",
+    "word": "mesa",
+    "translation": "table",
+    "example": "La comida está en la mesa.",
+    "pronunciation": "MEH-sah",
+    "example_translation": "The food is on the table."
+  },
+  {
+    "date": "2025-06-27",
+    "word": "silla",
+    "translation": "chair",
+    "example": "Me siento en la silla roja.",
+    "pronunciation": "SEE-yah",
+    "example_translation": "I sit on the red chair."
+  },
+  {
+    "date": "2025-06-28",
+    "word": "ventana",
+    "translation": "window",
+    "example": "Abro la ventana por la mañana.",
+    "pronunciation": "ben-TAH-nah",
+    "example_translation": "I open the window in the morning."
+  },
+  {
+    "date": "2025-06-29",
+    "word": "puerta",
+    "translation": "door",
+    "example": "La puerta está cerrada.",
+    "pronunciation": "PWEHR-tah",
+    "example_translation": "The door is closed."
+  },
+  {
+    "date": "2025-06-30",
+    "word": "coche",
+    "translation": "car",
+    "example": "El coche es muy rápido.",
+    "pronunciation": "KO-che",
+    "example_translation": "The car is very fast."
+  },
+  {
+    "date": "2025-07-01",
+    "word": "zapato",
+    "translation": "shoe",
+    "example": "Me pongo el zapato izquierdo.",
+    "pronunciation": "sah-PAH-to",
+    "example_translation": "I put on the left shoe."
+  },
+  {
+    "date": "2025-07-02",
+    "word": "camisa",
+    "translation": "shirt",
+    "example": "La camisa es azul.",
+    "pronunciation": "kah-MEE-sah",
+    "example_translation": "The shirt is blue."
+  },
+  {
+    "date": "2025-07-03",
+    "word": "pantalón",
+    "translation": "pants",
+    "example": "Llevo un pantalón negro.",
+    "pronunciation": "pahn-tah-LOHN",
+    "example_translation": "I wear black pants."
+  },
+  {
+    "date": "2025-07-04",
+    "word": "reloj",
+    "translation": "watch",
+    "example": "Mi reloj marca la hora.",
+    "pronunciation": "reh-LOH",
+    "example_translation": "My watch tells the time."
+  },
+  {
+    "date": "2025-07-05",
+    "word": "flor",
+    "translation": "flower",
+    "example": "La flor huele muy bien.",
+    "pronunciation": "FLOR",
+    "example_translation": "The flower smells very good."
+  },
+  {
+    "date": "2025-07-06",
+    "word": "camino",
+    "translation": "path",
+    "example": "El camino está lleno de piedras.",
+    "pronunciation": "kah-MEE-no",
+    "example_translation": "The path is full of stones."
+  },
+  {
+    "date": "2025-07-07",
+    "word": "mar",
+    "translation": "sea",
+    "example": "El mar está tranquilo hoy.",
+    "pronunciation": "MAR",
+    "example_translation": "The sea is calm today."
+  },
+  {
+    "date": "2025-07-08",
+    "word": "sol",
+    "translation": "sun",
+    "example": "El sol brilla en el cielo.",
+    "pronunciation": "SOL",
+    "example_translation": "The sun shines in the sky."
+  },
+  {
+    "date": "2025-07-09",
+    "word": "luna",
+    "translation": "moon",
+    "example": "La luna está llena esta noche.",
+    "pronunciation": "LOO-nah",
+    "example_translation": "The moon is full tonight."
+  },
+  {
+    "date": "2025-07-10",
+    "word": "estrella",
+    "translation": "star",
+    "example": "Una estrella brilla en el cielo.",
+    "pronunciation": "es-TRAY-yah",
+    "example_translation": "A star shines in the sky."
+  },
+  {
+    "date": "2025-07-11",
+    "word": "cielo",
+    "translation": "sky",
+    "example": "El cielo está despejado.",
+    "pronunciation": "SYEH-lo",
+    "example_translation": "The sky is clear."
+  },
+  {
+    "date": "2025-07-12",
+    "word": "río",
+    "translation": "river",
+    "example": "El río corre rápido.",
+    "pronunciation": "REE-oh",
+    "example_translation": "The river runs fast."
+  },
+  {
+    "date": "2025-07-13",
+    "word": "bosque",
+    "translation": "forest",
+    "example": "El bosque es muy denso.",
+    "pronunciation": "BOHS-keh",
+    "example_translation": "The forest is very dense."
+  },
+  {
+    "date": "2025-07-14",
+    "word": "montaña",
+    "translation": "mountain",
+    "example": "Subimos la montaña juntos.",
+    "pronunciation": "mon-TAH-nyah",
+    "example_translation": "We climbed the mountain together."
+  },
+  {
+    "date": "2025-07-15",
+    "word": "playa",
+    "translation": "beach",
+    "example": "Vamos a la playa en verano.",
+    "pronunciation": "PLAH-yah",
+    "example_translation": "We go to the beach in summer."
+  },
+  {
+    "date": "2025-07-16",
+    "word": "isla",
+    "translation": "island",
+    "example": "La isla es pequeña y bonita.",
+    "pronunciation": "EES-lah",
+    "example_translation": "The island is small and beautiful."
+  },
+  {
+    "date": "2025-07-17",
+    "word": "pájaro",
+    "translation": "bird",
+    "example": "El pájaro canta por la mañana.",
+    "pronunciation": "PAH-hah-ro",
+    "example_translation": "The bird sings in the morning."
+  },
+  {
+    "date": "2025-07-18",
+    "word": "pez",
+    "translation": "fish",
+    "example": "El pez nada en el agua.",
+    "pronunciation": "PES",
+    "example_translation": "The fish swims in the water."
+  },
+  {
+    "date": "2025-07-19",
+    "word": "leche",
+    "translation": "milk",
+    "example": "Bebo leche en el desayuno.",
+    "pronunciation": "LEH-cheh",
+    "example_translation": "I drink milk at breakfast."
+  },
+  {
+    "date": "2025-07-20",
+    "word": "pan",
+    "translation": "bread",
+    "example": "El pan está fresco.",
+    "pronunciation": "PAHN",
+    "example_translation": "The bread is fresh."
+  },
+  {
+    "date": "2025-07-21",
+    "word": "queso",
+    "translation": "cheese",
+    "example": "El queso es delicioso.",
+    "pronunciation": "KEH-so",
+    "example_translation": "The cheese is delicious."
+  },
+  {
+    "date": "2025-07-22",
+    "word": "manzana",
+    "translation": "apple",
+    "example": "Como una manzana roja.",
+    "pronunciation": "mahn-SAH-nah",
+    "example_translation": "I eat a red apple."
+  },
+  {
+    "date": "2025-07-23",
+    "word": "banana",
+    "translation": "banana",
+    "example": "La banana está madura.",
+    "pronunciation": "bah-NAH-nah",
+    "example_translation": "The banana is ripe."
+  },
+  {
+    "date": "2025-07-24",
+    "word": "agua",
+    "translation": "water",
+    "example": "El agua está fría.",
+    "pronunciation": "AH-gwah",
+    "example_translation": "The water is cold."
+  },
+  {
+    "date": "2025-07-25",
+    "word": "jugo",
+    "translation": "juice",
+    "example": "Me gusta el jugo de naranja.",
+    "pronunciation": "HOO-go",
+    "example_translation": "I like orange juice."
+  },
+  {
+    "date": "2025-07-26",
+    "word": "café",
+    "translation": "coffee",
+    "example": "Tomo café por la mañana.",
+    "pronunciation": "kah-FEH",
+    "example_translation": "I drink coffee in the morning."
+  },
+  {
+    "date": "2025-07-27",
+    "word": "té",
+    "translation": "tea",
+    "example": "Prefiero el té verde.",
+    "pronunciation": "TEH",
+    "example_translation": "I prefer green tea."
+  },
+  {
+    "date": "2025-07-28",
+    "word": "plato",
+    "translation": "plate",
+    "example": "El plato está limpio.",
+    "pronunciation": "PLAH-to",
+    "example_translation": "The plate is clean."
+  },
+  {
+    "date": "2025-07-29",
+    "word": "tenedor",
+    "translation": "fork",
+    "example": "Uso el tenedor para comer.",
+    "pronunciation": "teh-neh-DOR",
+    "example_translation": "I use the fork to eat."
+  },
+  {
+    "date": "2025-07-30",
+    "word": "cuchillo",
+    "translation": "knife",
+    "example": "El cuchillo está afilado.",
+    "pronunciation": "koo-CHEE-yo",
+    "example_translation": "The knife is sharp."
+  },
+  {
+    "date": "2025-07-31",
+    "word": "cuchara",
+    "translation": "spoon",
+    "example": "Necesito una cuchara para la sopa.",
+    "pronunciation": "koo-CHA-rah",
+    "example_translation": "I need a spoon for the soup."
+  },
+  {
+    "date": "2025-08-01",
+    "word": "bolsa",
+    "translation": "bag",
+    "example": "La bolsa está llena de compras.",
+    "pronunciation": "BOHL-sah",
+    "example_translation": "The bag is full of groceries."
+  },
+  {
+    "date": "2025-08-02",
+    "word": "dinero",
+    "translation": "money",
+    "example": "Necesito dinero para el viaje.",
+    "pronunciation": "dee-NEH-ro",
+    "example_translation": "I need money for the trip."
+  },
+  {
+    "date": "2025-08-03",
+    "word": "tienda",
+    "translation": "store",
+    "example": "Voy a la tienda a comprar pan.",
+    "pronunciation": "TYEHN-dah",
+    "example_translation": "I go to the store to buy bread."
+  },
+  {
+    "date": "2025-08-04",
+    "word": "mercado",
+    "translation": "market",
+    "example": "El mercado está muy animado.",
+    "pronunciation": "mehr-KAH-doh",
+    "example_translation": "The market is very lively."
+  },
+  {
+    "date": "2025-08-05",
+    "word": "trabajo",
+    "translation": "work",
+    "example": "Tengo mucho trabajo hoy.",
+    "pronunciation": "trah-BAH-ho",
+    "example_translation": "I have a lot of work today."
+  },
+  {
+    "date": "2025-08-06",
+    "word": "oficina",
+    "translation": "office",
+    "example": "La oficina está en el centro.",
+    "pronunciation": "oh-fee-SEE-nah",
+    "example_translation": "The office is downtown."
+  },
+  {
+    "date": "2025-08-07",
     "word": "escuela",
     "translation": "school",
     "example": "Voy a la escuela todos los días.",
-    "pronunciation": "es-KWEH-lah"
+    "pronunciation": "es-KWEH-lah",
+    "example_translation": "I go to school every day."
+  },
+  {
+    "date": "2025-08-08",
+    "word": "profesor",
+    "translation": "teacher",
+    "example": "El profesor explica bien.",
+    "pronunciation": "pro-feh-SOR",
+    "example_translation": "The teacher explains well."
   }
 ]
