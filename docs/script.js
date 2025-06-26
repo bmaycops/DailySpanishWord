@@ -101,29 +101,48 @@ fetch('https://raw.githubusercontent.com/bmaycops/DailySpanishWord/refs/heads/ma
           document.getElementById('pronunciation').classList.remove('hidden');
           document.getElementById('example_translation').classList.remove('hidden');
 
-          /*
-          // Display example translation
-          const exampleTranslationElement = document.createElement('p');
-          exampleTranslationElement.textContent = `"${todayWord.example_translation}"`;
-          exampleTranslationElement.className = 'italic text-sm mt-1 text-gray-500';
-          feedbackContainer.appendChild(exampleTranslationElement);
-          */
         }
       });
     }
     const prevContainer = document.getElementById('previous-words');
     previousWords.forEach(entry => {
-      const formattedDate = formatDate(entry.date); // Format the date
+      const formattedDate = formatDate(entry.date);
+
+      // Create the main container for the word box
       const box = document.createElement('div');
-      box.className = 'bg-gray-200 text-gray-700 p-4 rounded-xl shadow-sm relative';
-      box.innerHTML = `
-        <span class="absolute top-2 right-4 text-xs text-gray-500">${formattedDate}</span>
+      box.className = 'bg-gray-200 pt-3 pb-6 px-6 rounded-xl shadow-sm';
+
+      // Create the header section (word and date with dropdown arrow)
+      const header = document.createElement('div');
+      header.className = 'flex justify-between items-center cursor-pointer';
+      header.innerHTML = `
         <p class="text-lg font-semibold">${entry.word}</p>
-        <p class="text-md">(${entry.translation})</p>
+        <div class="flex items-center space-x-2">
+          <span class="text-xs text-gray-500">${formattedDate}</span>
+          <button class="text-gray-500 text-sm">▼</button>
+        </div>
+      `;
+
+      // Create the collapsible content section
+      const content = document.createElement('div');
+      content.className = 'hidden mt-2'; // Initially hidden
+      content.innerHTML = `
+        <p class="text-md text-gray-700 italic">(${entry.translation})</p>
         <p class="italic text-sm mt-1">${entry.example}</p>
-        <p class="italic text-sm mt-1"">${entry.example_translation}</p>
+        <p class="italic text-sm mt-1">${entry.example_translation}</p>
         <p class="text-xs mt-1 text-gray-500">Pronunciation: ${entry.pronunciation}</p>
       `;
+
+      // Add event listener to toggle visibility of the content
+      header.addEventListener('click', () => {
+        content.classList.toggle('hidden'); // Toggle the 'hidden' class
+      });
+
+      // Append header and content to the box
+      box.appendChild(header);
+      box.appendChild(content);
+
+      // Append the box to the previous words container
       prevContainer.appendChild(box);
     });
   })
