@@ -172,12 +172,11 @@ function formatDate(dateString) {
   const date = new Date(dateString);
   const day = date.getDate();
   const month = date.toLocaleString('en-US', { month: 'long' });
-  const year = date.getFullYear();
 
   // Add suffix to the day (e.g., "23rd")
   const daySuffix = getDaySuffix(day);
 
-  return `${day}${daySuffix} ${month} ${year}`;
+  return `${day}${daySuffix} ${month}`;
 }
 
 // Helper function to determine the day suffix
